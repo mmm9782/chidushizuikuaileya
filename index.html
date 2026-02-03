@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>静心口令</title>
+    <style>
+        /* 全局背景 */
+        body { 
+            background: #f4f1ea; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-family: -apple-system, "Noto Sans SC", serif;
+            overflow: hidden;
+        }
+
+        /* 登录容器 */
+        .login-container {
+            text-align: center;
+            width: 85%;
+            max-width: 350px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .title {
+            font-size: 1.6rem;
+            color: #8c6d51;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-size: 0.8rem;
+            color: #b0aaa5;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        /* 输入框样式 */
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 80%;
+            padding: 15px;
+            border: none;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #3e3a36;
+            letter-spacing: 4px;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            background: #fff;
+            box-shadow: 0 0 0 2px #8c6d51;
+        }
+
+        /* 按钮样式 */
+        button {
+            width: 60%;
+            padding: 12px;
+            background: #8c6d51;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            box-shadow: 0 10px 20px rgba(140, 109, 81, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+            opacity: 0.9;
+        }
+
+        /* 底部提示 */
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #d1c7bc;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="title">一念入心</div>
+        <div class="subtitle">—— 开启吃门的🔑 ——</div>
+
+        <div class="input-group">
+            <input type="password" id="passCode" placeholder="······" onkeydown="if(event.keyCode==13) verify()">
+        </div>
+
+        <button onclick="verify()">开启吃门的🔑</button>
+
+        <div class="footer-note">若见诸相非相 · 即见如来</div>
+    </div>
+
+    <script>
+        function verify() {
+            var input = document.getElementById("passCode").value;
+            // 设定密码为 336699
+            if (input === "336699") {
+                window.location.href = "main.html"; // 密码正确跳转
+            } else {
+                alert("缘分未到，请重新感悟");
+                document.getElementById("passCode").value = ""; // 清空输入框
+            }
+        }
+    </script>
+
+</body>
+</html>
