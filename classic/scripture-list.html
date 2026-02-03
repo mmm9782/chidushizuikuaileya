@@ -6,7 +6,6 @@
     <title>经典阅读 | 目录</title>
     
     <style>
-        /* 基础样式，延续星辰大海的古朴风格 */
         body { 
             background: #f4f1ea; 
             color: #3e3a36; 
@@ -18,7 +17,6 @@
             align-items: center; 
         }
         
-        /* 顶部导航栏 */
         .header { 
             width: 100%; 
             max-width: 500px; 
@@ -46,7 +44,6 @@
             font-weight: 400;
         }
 
-        /* 列表容器 */
         .book-list { 
             width: 100%; 
             max-width: 500px; 
@@ -55,44 +52,45 @@
             gap: 15px; 
         }
 
-        /* 经书卡片设计 */
         .book-card {
             background: white;
-            padding: 30px 20px;
+            padding: 25px 20px;
             border-radius: 16px;
             text-decoration: none;
             color: #5d4037;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             display: flex;
             align-items: center;
-            /* 侧边红杠模拟经书书脊 */
             border-left: 6px solid #b00; 
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s;
         }
 
-        /* 点击动态反馈 */
         .book-card:active { 
-            transform: scale(0.97); 
+            transform: scale(0.98); 
             background: #fafafa; 
         }
 
         .book-name { 
             flex-grow: 1;
-            font-size: 1.25rem; 
+            font-size: 1.2rem; 
             font-weight: bold; 
-            letter-spacing: 1px;
+        }
+
+        /* 增加一个“卷数”提示 */
+        .book-info {
+            font-size: 0.85rem;
+            color: #999;
+            margin-right: 10px;
         }
 
         .arrow { 
             color: #dcd7d0; 
             font-size: 1.2rem; 
-            font-weight: 200;
         }
 
-        /* 页脚 */
         .footer { 
-            margin-top: auto; 
-            padding: 60px 0 20px;
+            margin-top: 50px; 
+            padding-bottom: 30px;
             font-size: 0.85rem; 
             color: #b0aaa5; 
             text-align: center; 
@@ -105,24 +103,28 @@
     <div class="header">
         <a href="../index.html" class="back-btn">⇠ 首页</a>
         <div class="title">经典阅读</div>
-        <div style="width: 45px;"></div> </div>
+        <div style="width: 45px;"></div>
+    </div>
 
     <div class="book-list">
         
-        <a href="dizang-01.html" class="book-card">
+        <a href="dizang/index.html" class="book-card">
             <span class="book-name">地藏菩萨本愿经</span>
+            <span class="book-info">共十三品</span>
             <span class="arrow">❯</span>
         </a>
 
         <a href="xinjing.html" class="book-card" style="border-left-color: #8c6d51;">
             <span class="book-name">般若波罗蜜多心经</span>
+            <span class="book-info">一卷</span>
             <span class="arrow">❯</span>
         </a>
 
     </div>
 
     <div class="footer">
-        愿以此功德 庄严佛净土
+        愿以此功德 庄严佛净土<br>
+        普及于一切 我等与众生
     </div>
 
 </body>
