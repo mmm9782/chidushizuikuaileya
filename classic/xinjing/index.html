@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>般若波罗蜜多心经 | 入口</title>
+    <style>
+        /* 基础样式 */
+        body { 
+            background: #f4f1ea; 
+            color: #3e3a36; 
+            font-family: -apple-system, "Noto Sans SC", "STSong", serif; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 90vh;
+        }
+        
+        /* 顶部导航 */
+        .header { 
+            width: 100%; 
+            max-width: 500px; 
+            margin: 20px 0 40px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .back-btn { 
+            text-decoration: none; 
+            color: #8c6d51; 
+            font-weight: bold; 
+            font-size: 1rem; 
+        }
+        .title { 
+            flex-grow: 1; 
+            text-align: center; 
+            color: #8c6d51; 
+            font-size: 1.4rem; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        }
+        
+        /* 封面容器 */
+        .cover-container { 
+            width: 100%; 
+            max-width: 500px; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* 经书卡片 */
+        .scripture-card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 16px; 
+            text-decoration: none; 
+            color: #444; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #e0dcd5;
+            transition: all 0.3s ease;
+        }
+        
+        .scripture-card:active { 
+            transform: scale(0.98); 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .book-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .book-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a1a1a; /* 统一的黑色 */
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .book-info {
+            color: #8c6d51;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .read-btn {
+            background: #9d2020;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        /* 页脚 */
+        .footer { 
+            margin-top: 40px; 
+            padding-bottom: 30px;
+            color: #b0aaa5; 
+            font-size: 0.85rem; 
+            text-align: center; 
+            line-height: 1.8;
+            letter-spacing: 2px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="../scripture-list.html" class="back-btn">⇠ 返回</a>
+        <div class="title">经典阅读</div>
+        <div style="width: 45px;"></div>
+    </div>
+
+    <div class="cover-container">
+        <a href="01.html" class="scripture-card">
+            <i class="book-icon">📖</i>
+            <span class="book-name">般若波罗蜜多心经</span>
+            <span class="book-info">唐·玄奘法师 译</span>
+            <span class="read-btn">点击诵读</span>
+        </a>
+    </div>
+
+    <div class="footer">
+        照见五蕴皆空 度一切苦厄<br>
+        揭谛揭谛 波罗揭谛
+    </div>
+
+</body>
+</html>
