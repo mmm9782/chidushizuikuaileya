@@ -5,84 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>若见诸相非相即见如来</title>
     <style>
+        :root {
+            --bg-color: #f7f3f0; /* 更柔和的米色背景 */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-meta: #99918a;
+            --accent-red: #8b0000;
+            --accent-brown: #8c6d51;
+            --highlight-bg: #fff9e6;
+        }
+
         body { 
-            background: #f4f1ea; 
-            color: #3e3a36; 
-            font-family: -apple-system, "Noto Sans SC", "STSong", serif; 
+            background: var(--bg-color); 
+            color: var(--text-main); 
+            font-family: -apple-system, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", serif; 
             margin: 0; 
-            padding: 20px; 
+            padding: 0; 
             display: flex; 
             flex-direction: column; 
-            align-items: center; 
+            align-items: center;
+            -webkit-font-smoothing: antialiased;
         }
-        .header { width: 100%; max-width: 650px; margin: 20px 0 10px; }
-        .back-btn { text-decoration: none; color: #8c6d51; font-weight: bold; font-size: 0.95rem; }
+
+        /* 顶部导航 */
+        .header { 
+            width: 90%; 
+            max-width: 700px; 
+            margin: 30px 0 15px; 
+        }
+        .back-btn { 
+            text-decoration: none; 
+            color: var(--accent-brown); 
+            font-weight: 500; 
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+        .back-btn:hover { opacity: 0.7; }
         
+        /* 主体卡片 */
         .main-card { 
-            background: white; 
-            width: 100%; 
-            max-width: 650px; 
-            border-radius: 24px; 
-            padding: 45px 30px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            background: var(--card-bg); 
+            width: 92%; 
+            max-width: 700px; 
+            border-radius: 16px; 
+            padding: 50px 35px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
             box-sizing: border-box;
-            border: 1px solid #e0dcd5;
+            border: 1px solid #e8e4de;
+            margin-bottom: 40px;
         }
 
+        /* 标题优化 */
         .content-title { 
-            font-size: 1.6rem; 
-            color: #8b0000; 
+            font-size: 1.75rem; 
+            color: var(--accent-red); 
             text-align: center; 
-            margin-bottom: 10px; 
-            font-weight: bold; 
-            letter-spacing: 2px;
-            line-height: 1.4;
+            margin-bottom: 15px; 
+            font-weight: 700; 
+            letter-spacing: 1px;
+            line-height: 1.3;
         }
 
+        /* 元信息 */
         .post-meta { 
-            color: #b0aaa5; 
+            color: var(--text-meta); 
             font-size: 0.85rem; 
             text-align: center;
-            margin-bottom: 30px; 
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0eee9;
+            margin-bottom: 40px; 
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f2f0ed;
+            line-height: 1.8;
         }
 
-        /* 段落样式优化 */
+        /* 文章内容主体 */
         .article-content { 
-            line-height: 2.2; 
+            line-height: 1.9; /* 稍微调紧一点，2.2太稀疏了 */
             font-size: 1.1rem; 
-            color: #2c2c2c; 
+            color: #373737; 
             text-align: justify;
+            letter-spacing: 0.05em; /* 增加一点字间距，更有质感 */
         }
 
-        p { margin-bottom: 25px; text-indent: 0; }
+        p { margin-bottom: 28px; }
 
-        /* 重点金句：红字加底色 */
+        /* 金句样式 */
         .highlight {
-            color: #8b0000;
-            font-weight: bold;
-            background-color: #fff9e6;
+            color: var(--accent-red);
+            font-weight: 600;
+            background-color: var(--highlight-bg);
             padding: 2px 4px;
-            border-radius: 4px;
+            border-radius: 2px;
+            border-bottom: 1px dashed #decba4;
         }
 
-        /* 重点小标题 */
+        /* 小标题样式 */
         .section-tag {
-            display: inline-block;
-            color: #8c6d51;
+            display: block; /* 改为块级 */
+            color: var(--accent-brown);
             font-weight: bold;
-            border-bottom: 2px solid #8c6d51;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+            border-left: 4px solid var(--accent-brown); /* 改为左边框线，更有现代感 */
+            padding-left: 12px;
+            margin: 45px 0 20px 0;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
         }
 
+        /* 底部 */
         .footer { 
-            margin-top: 50px; 
-            color: #b0aaa5; 
+            color: var(--text-meta); 
             font-size: 0.85rem; 
             text-align: center; 
-            padding-bottom: 60px;
+            padding-bottom: 80px;
+            line-height: 2;
+        }
+
+        /* 手机端适配微调 */
+        @media (max-width: 600px) {
+            .main-card {
+                padding: 40px 20px;
+                border-radius: 0; /* 手机端全屏感更好 */
+                width: 100%;
+                border-left: none;
+                border-right: none;
+            }
+            .content-title { font-size: 1.4rem; }
+            .article-content { font-size: 1.05rem; }
         }
     </style>
 </head>
@@ -97,7 +144,7 @@
         
         <div class="post-meta">
             时间：2026.01.07<br>
-            出处：抖音@吃独食最快乐
+            出处：抖音 @吃独食最快乐
         </div>
 
         <div class="article-content">
@@ -106,11 +153,11 @@
             <p>一花一世界，一叶一菩提。懂了吗。所以说，<span class="highlight">若见诸相非相，即见如来。</span>你生万事万物，你即是万相。</p>
 
             <div class="section-tag">关于开悟的画面</div>
-            <p>我给大家讲讲，我当时开悟的时候就是想到了这一句话，然后不停的想，不停的讲，我脑子里出现什么画面？不知道你们看没有看到过某一个电影里边有个场景，就是很多人重叠，重叠成一个人，人影很多。雾重叠，重叠成一个雾，然后擦擦擦回向到我自己身上，然后成了一个我。啊，我突然明白了啊，若见诸相非相，即见如来，是这句话。</p>
+            <p>我给大家讲讲，我当时开悟的时候就是想到了这一句话，然后不停的想，不停的讲。我脑子里出现什么画面？不知道你们看没有看到过某一个电影里边有个场景，就是很多人重叠，重叠成一个人，人影很多。雾重叠，重叠成一个雾，然后擦擦擦回向到我自己身上，然后成了一个我。啊，我突然明白了啊，若见诸相非相，即见如来，是这句话。</p>
 
             <p>你们想象一下哈，就是所有的人，咱以见面会为例，50个人擦擦擦重叠成一个人，不管男女老少年龄，你遇到的每一个人，擦擦擦都重叠，然后最后再回到自己身上。所有的物，房子也好，车也好，你用的物品也好，都重叠，然后全回到自己身上。那么这所有的回到自己身上，哪有别人啊，就自己啊。</p>
 
-            <p>所以他告诉你，若见诸相非相，即见如来，你看到的都是像而已，能懂了吧？都是你眼睛夜力看到的一个像而已。抛开这些像，其实就是你自己，因为你看到这些像，他们才存在。你生万物生，你在宇宙在，你嘎了，这个宇宙太阳月亮跟你都没关系了，都是别人的了，是不是？</p>
+            <p>所以他告诉你，若见诸相非相，即见如来，你看到的都是像而已，能懂了吧？都是你眼睛业力看到的一个像而已。抛开这些像，其实就是你自己，因为你看到这些像，他们才存在。你生万物生，你在宇宙在，你嘎了，这个宇宙太阳月亮跟你都没关系了，都是别人的了，是不是？</p>
 
             <div class="section-tag">论有为法与观心</div>
             <p>所以他告诉你，是这个世界上没有别人，只有自己。所以《金刚经》最后告诉你什么：<span class="highlight">一切有为法，如梦幻泡影，如露亦如电，应作如是观。</span></p>
