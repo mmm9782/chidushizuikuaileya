@@ -4,79 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地藏菩萨本愿经 - 卷上</title>
-  <style>
-        /* 页面整体背景 */
-        body { 
-            background-color: #f2ede4; 
-            margin: 0; 
-            padding: 20px 10px; /* 缩小了顶部间距 */
-            display: flex; 
-            justify-content: center; 
-            font-family: "PingFang SC", "Microsoft YaHei", serif;
-        }
+<style>
+    /* 1. 页面整体背景：确保手机端居中且有呼吸感 */
+    body { 
+        background-color: #f2ede4; 
+        margin: 0; 
+        padding: 20px 10px; 
+        display: flex; 
+        justify-content: center; 
+        font-family: "PingFang SC", "Microsoft YaHei", serif;
+    }
 
-        /* 第一层：红色书封外壳 */
-        .book-cover {
-            background-color: #9d2020; 
-            padding: 8px; /* 缩小边框 */
-            border-radius: 6px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            max-width: 530px; 
-            width: 100%;
-        }
+    /* 2. 红色书封：像经书外壳 */
+    .book-cover {
+        background-color: #9d2020; 
+        padding: 8px; 
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        max-width: 530px; 
+        width: 100%;
+    }
 
-        /* 第二层：金色装饰边框 */
-        .gold-border {
-            border: 2px solid #d4af37; /* 边框变细 */
-            padding: 3px;
-            background-color: #9d2020;
-        }
+    /* 3. 金色装饰边框 */
+    .gold-border {
+        border: 2px solid #d4af37; 
+        padding: 3px;
+        background-color: #9d2020;
+    }
 
-        /* 第三层：白色纸张内页 */
-        .sutra-container {
-            background-color: #ffffff;
-            padding: 30px 20px; /* 缩小内边距，增加手机显示内容 */
-            min-height: 600px;
-        }
+    /* 4. 白色纸张内页 */
+    .sutra-container {
+        background-color: #ffffff;
+        padding: 30px 15px; /* 稍微缩小左右边距，给文字腾空间 */
+        min-height: 600px;
+    }
 
-        /* 经文文字通用样式 - 重点调整处 */
-        .sutra-content {
-            line-height: 1.8;      /* 调小行间距 */
-            letter-spacing: 1px;    /* 调小字间距 */
-            text-align: justify;
-            font-size: 20px;        /* 调小字号 */
-            font-weight: 500;       /* 稍微减细一点，看起来更秀气 */
-            color: #1a1a1a;
-        }
+    /* 5. 重点：解决对齐问题的核心配置 */
+    .sutra-content p {
+        display: flex;          /* 开启弹性布局 */
+        flex-wrap: wrap;       /* 自动换行 */
+        justify-content: center; /* 居中对齐，偈颂最美 */
+        line-height: 2.8;      /* 增加行高，给拼音留位置 */
+        margin-bottom: 25px;
+        text-align: center;
+    }
 
-        /* 拼音标注样式 */
-        ruby { 
-            ruby-position: over; 
-            ruby-align: center; 
-            color: #000000 !important; 
-        }
-        rt { 
-            font-size: 0.5em; 
-            color: #777777 !important; 
-            margin-bottom: 0.1em; 
-            letter-spacing: 0; 
-            font-weight: normal; 
-        }
+    /* 6. 每个字和标点的“固定座位” */
+    ruby { 
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 2.2em;         /* 每个字占据固定宽度，这样上下行才会对齐 */
+        color: #000000 !important;
+        vertical-align: top;
+    }
 
-        p { margin-bottom: 1.2em; margin-top: 0; }
-        
-        /* 标题样式调整 */
-        .sutra-title { text-align: center; font-weight: bold; font-size: 24px; margin-bottom: 8px; color: #000; }
-        .sutra-subtitle { text-align: center; font-size: 18px; color: #884400; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
-        /* 真言/偈颂 引导标题 */
-        .mantra-title { font-size: 18px; color: #b00; border-left: 4px solid #b00; padding-left: 10px; margin: 25px 0 12px 0; font-weight: bold; }
-        
-        /* 注解/括注 */
-        .note { font-size: 15px; color: #888; font-weight: normal; }
-      /* 针对这段劝勉语的特殊处理 */
+    /* 7. 拼音样式优化 */
+    rt { 
+        font-size: 0.45em; 
+        color: #777777 !important; 
+        line-height: 1;
+        height: 1.2em;        /* 拼音高度固定 */
+        letter-spacing: 0; 
+        font-weight: normal; 
+    }
 
-    </style>
+    /* 8. 标题与装饰 */
+    .sutra-title { text-align: center; font-weight: bold; font-size: 24px; margin-bottom: 8px; color: #000; }
+    .sutra-subtitle { text-align: center; font-size: 18px; color: #884400; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+    .mantra-title { font-size: 18px; color: #b00; border-left: 4px solid #b00; padding-left: 10px; margin: 25px 0 12px 0; font-weight: bold; }
+    .note { font-size: 14px; color: #888; font-weight: normal; }
+
+    /* 9. 劝勉语（注释样式） */
+    .next-step-mark {
+        margin-top: 40px;
+        padding: 15px;
+        border-top: 1px dashed #ddd;
+        font-size: 15px;
+        color: #888;
+        text-align: center;
+    }
+    .next-step-mark ruby { width: 1.5em; color: #888 !important; } /* 注释部分的字也稍微收紧 */
+</style>
 </head>
 <body>
     <div class="book-cover">
