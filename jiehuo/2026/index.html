@@ -19,50 +19,58 @@
         .header { 
             width: 100%; 
             max-width: 500px; 
-            margin: 30px 0; 
+            margin: 30px 0 20px; 
             display: flex; 
             align-items: center; 
         }
         
         .back-btn { 
             text-decoration: none; 
-            color: #8c6d51; 
-            font-weight: bold; 
-        }
-        
-        .title { 
-            flex-grow: 1; 
-            text-align: center; 
-            color: #8c6d51; 
-            font-size: 1.4rem; 
-            font-weight: bold; 
-            letter-spacing: 2px; 
+            color: #b0aaa5; 
+            font-size: 0.9rem;
         }
 
-        .list-container { 
+        /* 核心修改：将所有列表包裹在一个白色大卡片里 */
+        .container { 
             width: 100%; 
             max-width: 500px; 
-        }
-
-        /* 列表条目样式 */
-        .item-link { 
-            background: white; 
-            padding: 22px 20px; 
-            border-radius: 16px; 
-            text-decoration: none; 
-            color: #333; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 15px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+            background: white;
+            border-radius: 20px;
+            padding: 10px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             border: 1px solid #e0dcd5;
-            transition: transform 0.2s;
         }
 
-        .item-link:active { 
-            transform: scale(0.98); 
+        /* 顶部标题行 */
+        .list-header {
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #f8f6f2;
         }
+        
+        .list-header-icon { font-size: 1.4rem; margin-right: 12px; }
+        .list-header-text { 
+            font-size: 1.3rem; 
+            font-weight: bold; 
+            color: #8c6d51; 
+            letter-spacing: 2px;
+        }
+
+        /* 列表条目样式：去掉独立边框，改为内部细线分隔 */
+        .item-link { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 25px;
+            text-decoration: none;
+            color: #3e3a36;
+            border-bottom: 1px solid #f8f6f2;
+            transition: background 0.2s;
+        }
+
+        .item-link:last-child { border-bottom: none; } /* 最后一个条目不显示横线 */
+        .item-link:active { background: #fafafa; }
 
         .item-info h3 { 
             margin: 0; 
@@ -78,33 +86,33 @@
             display: block; 
         }
 
-        .arrow { 
-            color: #d1c7bc; 
-            font-weight: bold; 
-        }
+        .arrow { color: #e0dcd5; font-size: 0.9rem; }
 
         .footer { 
             margin-top: 50px; 
-            color: #b0aaa5; 
-            font-size: 0.85rem; 
+            color: #d1c7bc; 
+            font-size: 0.8rem; 
             text-align: center; 
+            line-height: 2;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <a href="../index.html" class="back-btn">⇠ 返回</a>
-        <div class="title">2026年度 存档</div>
-        <div style="width: 45px;"></div>
+        <a href="../index.html" class="back-btn">← 返回</a>
     </div>
 
-    <div class="list-container">
+    <div class="container">
+        <div class="list-header">
+            <span class="list-header-icon">🗓️</span>
+            <span class="list-header-text">二零二六 · 存档</span>
+        </div>
 
         <a href="0203.html" class="item-link">
             <div class="item-info">
-                <h3>【关于解脱与法】</h3>
-                <span>收录日期：2026年2月3日</span>
+                <h3>修行解惑：关于解脱与法</h3>
+                <span>收录于 2026.02.03</span>
             </div>
             <div class="arrow">❯</div>
         </a>
@@ -112,7 +120,8 @@
         </div>
 
     <div class="footer">
-        法水长流 · 润物无声
+        法水长流 · 润物无声<br>
+        愿智慧之光 常照世间
     </div>
 
 </body>
