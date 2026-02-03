@@ -12,11 +12,11 @@
     <meta name="apple-mobile-web-app-title" content="星辰大海">
 
     <style>
-        /* 基础样式复原与升级 */
+        /* 页面整体风格：古朴清净 */
         body { 
             background: #f4f1ea; 
             color: #3e3a36; 
-            font-family: -apple-system, "Noto Sans SC", sans-serif; 
+            font-family: -apple-system, "Noto Sans SC", "Microsoft YaHei", sans-serif; 
             margin: 0; 
             display: flex; 
             justify-content: center; 
@@ -28,26 +28,26 @@
             max-width: 500px; 
             width: 90%; 
             text-align: center; 
-            animation: fadeIn 0.8s ease-out;
+            animation: fadeIn 1s ease-out;
         }
 
         h1 { 
             color: #8c6d51; 
             margin-bottom: 40px; 
-            letter-spacing: 6px; 
+            letter-spacing: 8px; 
             font-weight: 400; 
             font-size: 2.2rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
         }
 
-        /* 导航网格：两列布局 */
+        /* 导航网格布局 */
         .nav-grid { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
             gap: 20px; 
         }
 
-        /* 卡片样式优化 */
+        /* 导航卡片 */
         .nav-card { 
             background: white; 
             padding: 40px 10px; 
@@ -62,13 +62,13 @@
             border: 1px solid rgba(140, 109, 81, 0.1);
         }
 
-        /* 点击反馈 */
+        /* 点击反馈效果 */
         .nav-card:active { 
             transform: scale(0.92); 
             background: #fdfcfb; 
         }
 
-        /* 图标样式：增加光影感 */
+        /* 图标样式 */
         .nav-icon { 
             font-size: 3.2rem; 
             margin-bottom: 15px; 
@@ -81,25 +81,27 @@
             letter-spacing: 2px; 
         }
 
-        /* 页脚 */
+        /* 页脚样式 */
         .footer { 
             margin-top: 60px; 
             font-size: 0.9rem; 
             color: #b0aaa5; 
-            line-height: 1.8;
-        }
-
-        .encryption-note {
-            font-size: 0.7rem;
-            opacity: 0.5;
+            line-height: 2.2;
             letter-spacing: 1px;
-            margin-top: 10px;
-            display: block;
         }
 
-        /* 入场动画 */
+        .sutra-note {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            display: block;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-style: normal;
+        }
+
+        /* 入场淡入动画 */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -110,12 +112,12 @@
         <h1>星辰大海</h1>
 
         <div class="nav-grid">
-            <a href="docs/scripture-list.html" class="nav-card">
+            <a href="classic/scripture-list.html" class="nav-card">
                 <span class="nav-icon">📜</span>
                 <span class="nav-title">经典阅读</span>
             </a>
 
-            <a href="docs/qa-list.html" class="nav-card">
+            <a href="jiehuo/qa-list.html" class="nav-card">
                 <span class="nav-icon">🪷</span>
                 <span class="nav-title">文字解惑</span>
             </a>
@@ -123,7 +125,7 @@
 
         <div class="footer">
             诸恶莫作 众善奉行
-            <span class="encryption-note">若见诸相非相即见如来</span>
+            <span class="sutra-note">若见诸相非相 即见如来</span>
         </div>
     </div>
 
