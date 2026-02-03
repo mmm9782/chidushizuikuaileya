@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>地藏菩萨本愿经 | 目录</title>
+    <style>
+        /* 基础样式 */
+        body { 
+            background: #f4f1ea; 
+            color: #3e3a36; 
+            font-family: -apple-system, "Noto Sans SC", "STSong", serif; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        
+        /* 顶部导航 */
+        .header { 
+            width: 100%; 
+            max-width: 500px; 
+            margin: 20px 0 30px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .back-btn { 
+            text-decoration: none; 
+            color: #8c6d51; 
+            font-weight: bold; 
+            font-size: 1rem; 
+        }
+        .title { 
+            flex-grow: 1; 
+            text-align: center; 
+            color: #8c6d51; 
+            font-size: 1.4rem; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+        }
+        
+        /* 列表容器 */
+        .chapter-list { 
+            width: 100%; 
+            max-width: 500px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+        }
+        
+        /* 卷标题（上中下） */
+        .volume-tag { 
+            background: #9d2020; 
+            color: white; 
+            padding: 6px 15px; 
+            border-radius: 4px; 
+            font-size: 0.9rem; 
+            margin: 15px 0 5px; 
+            align-self: flex-start;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* 每一品的卡片 */
+        .chapter-card { 
+            background: white; 
+            padding: 18px 20px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: #444; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border: 1px solid #e0dcd5;
+            transition: all 0.2s;
+        }
+        
+        /* 点击效果 */
+        .chapter-card:active { 
+            background: #fdfaf2; 
+            transform: translateY(1px); 
+            box-shadow: none;
+        }
+
+        /* 小书本图标 */
+        .book-icon {
+            margin-right: 10px;
+            color: #9d2020;
+            font-style: normal;
+        }
+        
+        .chapter-num { 
+            color: #b00; 
+            font-weight: bold; 
+            margin-right: 8px; 
+            font-size: 0.95rem;
+        }
+
+        .arrow { color: #dcd7d0; font-size: 1.1rem; }
+
+        /* 页脚 */
+        .footer { 
+            margin-top: 60px; 
+            padding-bottom: 40px;
+            color: #b0aaa5; 
+            font-size: 0.85rem; 
+            text-align: center; 
+            line-height: 1.8;
+            letter-spacing: 2px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="../scripture-list.html" class="back-btn">⇠ 返回</a>
+        <div class="title">地藏菩萨本愿经</div>
+        <div style="width: 45px;"></div>
+    </div>
+
+    <div class="chapter-list">
+        
+        <div class="volume-tag">卷上</div>
+        
+        <a href="01.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第一品</span> 忉利天宫神通品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="02.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第二品</span> 分身集会品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="03.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第三品</span> 观众生业缘品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="04.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第四品</span> 阎浮众生业感品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <div class="volume-tag">卷中</div>
+
+        <a href="05.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第五品</span> 地狱名号品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="06.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第六品</span> 如来赞叹品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="07.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第七品</span> 利益存亡品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="08.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第八品</span> 阎罗王众赞叹品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="09.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第九品</span> 称佛名号品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <div class="volume-tag">卷下</div>
+
+        <a href="10.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">第十品</span> 校量布施功德缘品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="11.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">十一品</span> 地神护法品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="12.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">十二品</span> 见闻利益品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+        <a href="13.html" class="chapter-card">
+            <span><i class="book-icon">📖</i><span class="chapter-num">十三品</span> 嘱累人天品</span>
+            <span class="arrow">❯</span>
+        </a>
+
+    </div>
+
+    <div class="footer">
+        愿以此功德 庄严佛净土<br>
+        上报四重恩 下济三途苦
+    </div>
+
+</body>
+</html>
