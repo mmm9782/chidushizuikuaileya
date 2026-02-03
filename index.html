@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>星辰大海 | 导航中心</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./logo.png?v=999">
+    <link rel="icon" type="image/png" href="./logo.png?v=999">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="星辰大海">
 
+    <style>
+        /* 基础样式复原与升级 */
+        body { 
+            background: #f4f1ea; 
+            color: #3e3a36; 
+            font-family: -apple-system, "Noto Sans SC", sans-serif; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+
+        .container { 
+            max-width: 500px; 
+            width: 90%; 
+            text-align: center; 
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        h1 { 
+            color: #8c6d51; 
+            margin-bottom: 40px; 
+            letter-spacing: 6px; 
+            font-weight: 400; 
+            font-size: 2.2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* 导航网格：两列布局 */
+        .nav-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+        }
+
+        /* 卡片样式优化 */
+        .nav-card { 
+            background: white; 
+            padding: 40px 10px; 
+            border-radius: 24px; 
+            text-decoration: none; 
+            color: #5d4037; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            border: 1px solid rgba(140, 109, 81, 0.1);
+        }
+
+        /* 点击反馈 */
+        .nav-card:active { 
+            transform: scale(0.92); 
+            background: #fdfcfb; 
+        }
+
+        /* 图标样式：增加光影感 */
+        .nav-icon { 
+            font-size: 3.2rem; 
+            margin-bottom: 15px; 
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .nav-title { 
+            font-weight: bold; 
+            font-size: 1.15rem; 
+            letter-spacing: 2px; 
+        }
+
+        /* 页脚 */
+        .footer { 
+            margin-top: 60px; 
+            font-size: 0.9rem; 
+            color: #b0aaa5; 
+            line-height: 1.8;
+        }
+
+        .encryption-note {
+            font-size: 0.7rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* 入场动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>星辰大海</h1>
+
+        <div class="nav-grid">
+            <a href="docs/scripture-list.html" class="nav-card">
+                <span class="nav-icon">📜</span>
+                <span class="nav-title">经典阅读</span>
+            </a>
+
+            <a href="docs/qa-list.html" class="nav-card">
+                <span class="nav-icon">🪷</span>
+                <span class="nav-title">文字解惑</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            诸恶莫作 众善奉行
+            <span class="encryption-note">若见诸相非相即见如来</span>
+        </div>
+    </div>
+
+</body>
+</html>
