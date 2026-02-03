@@ -67,7 +67,7 @@
             padding: 18px 20px; 
             border-radius: 12px; 
             text-decoration: none; 
-            color: #444; 
+            color: #444; /* 这里控制了整体文字颜色 */
             box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
             display: flex; 
             justify-content: space-between; 
@@ -83,15 +83,16 @@
             box-shadow: none;
         }
 
-        /* 小书本图标 */
+        /* 小书本图标颜色，我调成了与文字一致的深色 */
         .book-icon {
             margin-right: 10px;
-            color: #9d2020;
+            color: #555;
             font-style: normal;
         }
         
+        /* 修改点：将 chapter-num 颜色从红色改为和品名一致的 #444 */
         .chapter-num { 
-            color: #b00; 
+            color: #444; 
             font-weight: bold; 
             margin-right: 8px; 
             font-size: 0.95rem;
