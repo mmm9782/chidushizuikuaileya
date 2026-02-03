@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>静心口令</title>
     <style>
-        /* 全局背景 */
         body { 
             background: #f4f1ea; 
             margin: 0; 
@@ -17,14 +16,13 @@
             overflow: hidden;
         }
 
-        /* 登录容器 */
         .login-container {
             text-align: center;
             width: 85%;
             max-width: 350px;
             padding: 40px 20px;
             background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+            backdrop-filter: blur(10px);
             border-radius: 30px;
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
@@ -46,7 +44,6 @@
             margin-bottom: 30px;
         }
 
-        /* 输入框样式 */
         .input-group {
             position: relative;
             margin-bottom: 25px;
@@ -72,9 +69,8 @@
             box-shadow: 0 0 0 2px #8c6d51;
         }
 
-        /* 按钮样式 */
         button {
-            width: 60%;
+            width: 70%;
             padding: 12px;
             background: #8c6d51;
             color: #fff;
@@ -83,16 +79,12 @@
             font-size: 1rem;
             letter-spacing: 3px;
             cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s;
             box-shadow: 0 10px 20px rgba(140, 109, 81, 0.2);
         }
 
-        button:active {
-            transform: scale(0.95);
-            opacity: 0.9;
-        }
+        button:active { transform: scale(0.95); }
 
-        /* 底部提示 */
         .footer-note {
             margin-top: 30px;
             font-size: 0.7rem;
@@ -109,14 +101,15 @@
 <body>
 
     <div class="login-container">
+        <div style="font-size: 2.5rem; margin-bottom: 15px;">🗝️</div>
         <div class="title">一念入心</div>
-        <div class="subtitle">—— 开启吃门的🔑 ——</div>
+        <div class="subtitle">—— 开启吃门的🗝️ ——</div>
 
         <div class="input-group">
             <input type="password" id="passCode" placeholder="······" onkeydown="if(event.keyCode==13) verify()">
         </div>
 
-        <button onclick="verify()">开启吃门的🔑</button>
+        <button onclick="verify()">开启智慧之门</button>
 
         <div class="footer-note">若见诸相非相 · 即见如来</div>
     </div>
@@ -126,10 +119,10 @@
             var input = document.getElementById("passCode").value;
             // 设定密码为 336699
             if (input === "336699") {
-                window.location.href = "main.html"; // 密码正确跳转
+                window.location.href = "main.html"; 
             } else {
                 alert("缘分未到，请重新感悟");
-                document.getElementById("passCode").value = ""; // 清空输入框
+                document.getElementById("passCode").value = ""; 
             }
         }
     </script>
