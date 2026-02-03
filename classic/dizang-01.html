@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地藏菩萨本愿经 - 卷上</title>
+    <style>
+        /* 页面整体背景，模拟深色桌面 */
+        body { 
+            background-color: #f2ede4; 
+            margin: 0; 
+            padding: 30px 15px; 
+            display: flex; 
+            justify-content: center; 
+            font-family: "PingFang SC", "Microsoft YaHei", serif;
+        }
+
+        /* 第一层：红色书封外壳 */
+        .book-cover {
+            background-color: #9d2020; 
+            padding: 12px;
+            border-radius: 6px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            max-width: 530px; 
+            width: 100%;
+        }
+
+        /* 第二层：金色装饰边框 */
+        .gold-border {
+            border: 3px solid #d4af37;
+            padding: 5px;
+            background-color: #9d2020;
+        }
+
+        /* 第三层：白色纸张内页 */
+        .sutra-container {
+            background-color: #ffffff;
+            padding: 45px 35px;
+            min-height: 800px;
+        }
+
+        /* 经文文字通用样式 */
+        .sutra-content {
+            line-height: 3.2; 
+            letter-spacing: 4px; 
+            text-align: justify;
+            font-size: 28px; 
+            font-weight: 600;
+            color: #000000;
+        }
+
+        /* 拼音标注样式 */
+        ruby { 
+            ruby-position: over; 
+            ruby-align: center; 
+            color: #000000 !important; 
+        }
+        rt { 
+            font-size: 0.45em; 
+            color: #666666 !important; 
+            margin-bottom: 0.2em; 
+            letter-spacing: 0; 
+            font-weight: normal; 
+        }
+
+        p { margin-bottom: 1.5em; margin-top: 0; }
+        
+        /* 标题样式 */
+        .sutra-title { text-align: center; font-weight: bold; font-size: 32px; margin-bottom: 10px; color: #000; }
+        .sutra-subtitle { text-align: center; font-size: 24px; color: #884400; margin-bottom: 45px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        
+        /* 真言/偈颂 引导标题 */
+        .mantra-title { font-size: 22px; color: #b00; border-left: 5px solid #b00; padding-left: 12px; margin: 35px 0 15px 0; font-weight: bold; }
+        
+        /* 注解/括注（如：合掌三称） */
+        .note { font-size: 18px; color: #888; font-weight: normal; }
+
+        /* 辅助标记（搬运完可删除） */
+        .next-step-mark { border: 1px dashed #ccc; padding: 10px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="book-cover">
+        <div class="gold-border">
+            <div class="sutra-container">
+                <div class="sutra-content">
+                    ```
+
+---
+
+### 💡 搬运小贴士：
+1.  **标签结构**：在上面代码的最后一行 `` 之后，直接把您的经文（如 `<div class="sutra-title">` 到最后的内容）粘进去即可。
+2.  **闭合标签**：粘贴完后，请务必在代码最末尾加上这三个闭合标签，以保证红皮金边的效果能包住经文：
+    ```html
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
