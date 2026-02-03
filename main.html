@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>星辰大海 | 导航中心</title>
+    <title>吃独食最快乐</title>
     
-    <link rel="icon" type="image/jpeg" href="./logo.png">
-    <link rel="apple-touch-icon" href="./logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
 
-    <meta name="apple-mobile-web-app-title" content="星辰大海">
+    <meta name="apple-mobile-web-app-title" content="吃独食最快乐">
+    <meta name="application-name" content="吃独食最快乐">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <style>
-        /* 这里保持您原来的 CSS 样式不变 ... */
         body { background: #f4f1ea; color: #3e3a36; font-family: -apple-system, "Noto Sans SC", sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         .container { max-width: 500px; width: 90%; text-align: center; }
         h1 { color: #8c6d51; margin-bottom: 40px; letter-spacing: 8px; font-weight: 400; font-size: 2.2rem; }
         .nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .nav-card { background: white; padding: 40px 10px; border-radius: 24px; text-decoration: none; color: #5d4037; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(140, 109, 81, 0.1); }
+        .nav-card { background: white; padding: 40px 10px; border-radius: 24px; text-decoration: none; color: #5d4037; box-shadow: 0 10px 25px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(140, 109, 81, 0.1); transition: transform 0.2s; }
+        .nav-card:active { transform: scale(0.95); }
         .nav-icon { font-size: 3.2rem; margin-bottom: 15px; }
         .nav-title { font-weight: bold; font-size: 1.15rem; }
         .footer { margin-top: 60px; font-size: 0.9rem; color: #b0aaa5; line-height: 2.2; }
