@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>地藏菩萨本愿经 - 卷上</title>
-    <style>
+  <style>
         /* 页面整体背景 */
         body { 
             background-color: #f2ede4; 
             margin: 0; 
-            padding: 30px 15px; 
+            padding: 20px 10px; /* 缩小了顶部间距 */
             display: flex; 
             justify-content: center; 
             font-family: "PingFang SC", "Microsoft YaHei", serif;
@@ -18,35 +18,35 @@
         /* 第一层：红色书封外壳 */
         .book-cover {
             background-color: #9d2020; 
-            padding: 12px;
+            padding: 8px; /* 缩小边框 */
             border-radius: 6px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             max-width: 530px; 
             width: 100%;
         }
 
         /* 第二层：金色装饰边框 */
         .gold-border {
-            border: 3px solid #d4af37;
-            padding: 5px;
+            border: 2px solid #d4af37; /* 边框变细 */
+            padding: 3px;
             background-color: #9d2020;
         }
 
         /* 第三层：白色纸张内页 */
         .sutra-container {
             background-color: #ffffff;
-            padding: 45px 35px;
-            min-height: 800px;
+            padding: 30px 20px; /* 缩小内边距，增加手机显示内容 */
+            min-height: 600px;
         }
 
-        /* 经文文字通用样式 */
+        /* 经文文字通用样式 - 重点调整处 */
         .sutra-content {
-            line-height: 3.2; 
-            letter-spacing: 4px; 
+            line-height: 1.8;      /* 调小行间距 */
+            letter-spacing: 1px;    /* 调小字间距 */
             text-align: justify;
-            font-size: 28px; 
-            font-weight: 600;
-            color: #000000;
+            font-size: 20px;        /* 调小字号 */
+            font-weight: 500;       /* 稍微减细一点，看起来更秀气 */
+            color: #1a1a1a;
         }
 
         /* 拼音标注样式 */
@@ -56,24 +56,24 @@
             color: #000000 !important; 
         }
         rt { 
-            font-size: 0.45em; 
-            color: #666666 !important; 
-            margin-bottom: 0.2em; 
+            font-size: 0.5em; 
+            color: #777777 !important; 
+            margin-bottom: 0.1em; 
             letter-spacing: 0; 
             font-weight: normal; 
         }
 
-        p { margin-bottom: 1.5em; margin-top: 0; }
+        p { margin-bottom: 1.2em; margin-top: 0; }
         
-        /* 标题样式 */
-        .sutra-title { text-align: center; font-weight: bold; font-size: 32px; margin-bottom: 10px; color: #000; }
-        .sutra-subtitle { text-align: center; font-size: 24px; color: #884400; margin-bottom: 45px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        /* 标题样式调整 */
+        .sutra-title { text-align: center; font-weight: bold; font-size: 24px; margin-bottom: 8px; color: #000; }
+        .sutra-subtitle { text-align: center; font-size: 18px; color: #884400; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         
         /* 真言/偈颂 引导标题 */
-        .mantra-title { font-size: 22px; color: #b00; border-left: 5px solid #b00; padding-left: 12px; margin: 35px 0 15px 0; font-weight: bold; }
+        .mantra-title { font-size: 18px; color: #b00; border-left: 4px solid #b00; padding-left: 10px; margin: 25px 0 12px 0; font-weight: bold; }
         
         /* 注解/括注 */
-        .note { font-size: 18px; color: #888; font-weight: normal; }
+        .note { font-size: 15px; color: #888; font-weight: normal; }
     </style>
 </head>
 <body>
