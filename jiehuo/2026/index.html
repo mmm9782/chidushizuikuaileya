@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2026年度 | 文字解惑存档</title>
+    <title>2026年度存档</title>
     <style>
         body { 
             background: #f4f1ea; 
@@ -19,9 +19,7 @@
         .header { 
             width: 100%; 
             max-width: 600px; 
-            margin: 30px 0 10px; 
-            display: flex; 
-            align-items: center; 
+            margin: 20px 0 10px; 
         }
         
         .back-btn { 
@@ -30,65 +28,53 @@
             font-size: 0.9rem;
         }
 
-        /* 列表容器：去掉背景和边框，保持透明 */
         .list-container { 
             width: 100%; 
             max-width: 600px; 
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
-        /* 顶部装饰标题 */
-        .list-header {
-            padding: 0 10px 20px;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #e0dcd5; /* 仅留一条细线 */
-            margin-bottom: 10px;
-        }
-        
-        .list-header-text { 
-            font-size: 1.3rem; 
-            font-weight: bold; 
-            color: #8c6d51; 
-            letter-spacing: 2px;
-        }
-
-        /* 标题条目样式：仿照第二张图的极简感 */
+        /* 极简条目：去掉所有大边框和背景 */
         .item-link { 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 10px;
+            padding: 20px 5px; /* 缩小了上下间距 */
             text-decoration: none;
             color: #3e3a36;
-            border-bottom: 1px solid #e8e4db; /* 淡淡的底线区分条目 */
+            border-bottom: 1px solid #e8e4db; /* 极细的分割线 */
             transition: opacity 0.2s;
         }
 
-        .item-link:active { opacity: 0.7; }
+        .item-link:active { opacity: 0.6; }
 
+        /* 调小标题字号 */
         .item-title { 
-            font-size: 1.15rem; 
-            color: #1a1a1a;
-            font-weight: 500;
+            font-size: 1.05rem; /* 字号调小，更显精致 */
+            color: #2c2c2c;
+            font-weight: 400; /* 减细字体 */
             letter-spacing: 0.5px;
         }
 
-        /* 日期样式：紧跟在标题后面或下方 */
+        /* 日期数字 */
         .item-date {
             color: #b0aaa5;
             font-size: 0.85rem;
-            font-family: monospace; /* 数字使用等宽字体更整齐 */
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
-        .arrow { color: #d1c7bc; font-size: 0.9rem; margin-left: 10px; }
-
-        .footer { 
-            margin-top: 80px; 
+        .arrow { 
             color: #d1c7bc; 
             font-size: 0.8rem; 
+            margin-left: 8px; 
+        }
+
+        .footer { 
+            margin-top: 100px; 
+            color: #d1c7bc; 
+            font-size: 0.75rem; 
             text-align: center; 
-            line-height: 2;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -99,21 +85,17 @@
     </div>
 
     <div class="list-container">
-        <div class="list-header">
-            <span class="list-header-text">📜 二零二六 · 存档</span>
-        </div>
-
         <a href="0203.html" class="item-link">
-            <span class="item-title">修行解惑：关于解脱与法</span>
+            <span class="item-title">关于解脱与法</span>
             <div>
                 <span class="item-date">20260203</span>
                 <span class="arrow">❯</span>
             </div>
         </a>
+
         </div>
 
     <div class="footer">
-        法水长流 · 润物无声<br>
         愿智慧之光 常照世间
     </div>
 
