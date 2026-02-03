@@ -9,7 +9,7 @@
         body { 
             background: #f4f1ea; 
             color: #3e3a36; 
-            font-family: -apple-system, "Noto Sans SC", sans-serif; 
+            font-family: -apple-system, "Noto Sans SC", serif; 
             margin: 0; 
             padding: 20px; 
             display: flex; 
@@ -21,47 +21,43 @@
             width: 100%; 
             max-width: 500px; 
             margin-top: 20px;
-            margin-bottom: 30px; 
+            margin-bottom: 40px; 
             display: flex; 
             align-items: center; 
         }
 
         .back-btn { 
             text-decoration: none; 
-            color: #8c6d51; 
-            font-size: 1rem; 
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            color: #b0aaa5; 
+            font-size: 0.9rem;
         }
 
         .title { 
             flex-grow: 1; 
             text-align: center; 
             color: #8c6d51; 
-            font-size: 1.5rem; 
-            letter-spacing: 2px; 
-            font-weight: 400;
+            font-size: 1.4rem; 
+            letter-spacing: 4px; 
+            font-weight: bold;
         }
 
         .book-list { 
             width: 100%; 
             max-width: 500px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
         }
 
+        /* 统一的卡片风格 */
         .book-card {
             background: white;
-            padding: 25px 20px;
-            border-radius: 16px;
+            padding: 22px 20px;
+            border-radius: 12px;
             text-decoration: none;
-            color: #5d4037;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            /* 统一文字颜色为深灰黑 */
+            color: #2c2c2c; 
             display: flex;
             align-items: center;
-            border-left: 6px solid #b00; 
+            margin-bottom: 15px;
+            border: 1px solid #e0dcd5; 
             transition: all 0.2s;
         }
 
@@ -72,49 +68,56 @@
 
         .book-name { 
             flex-grow: 1;
-            font-size: 1.2rem; 
-            font-weight: bold; 
+            font-size: 1.1rem; 
+            font-weight: 500;
+            letter-spacing: 1px;
+            /* 确保所有书名颜色一致 */
+            color: #2c2c2c; 
         }
 
-        /* 增加一个“卷数”提示 */
         .book-info {
             font-size: 0.85rem;
-            color: #999;
-            margin-right: 10px;
+            color: #b0aaa5;
+            margin-right: 8px;
         }
 
         .arrow { 
-            color: #dcd7d0; 
-            font-size: 1.2rem; 
+            color: #e0dcd5; 
+            font-size: 0.8rem; 
         }
 
+        /* 侧边色块：仅作点缀，不影响文字颜色 */
+        .border-red { border-left: 5px solid #8b0000; }
+        .border-brown { border-left: 5px solid #8c6d51; }
+
         .footer { 
-            margin-top: 50px; 
-            padding-bottom: 30px;
-            font-size: 0.85rem; 
-            color: #b0aaa5; 
+            margin-top: auto; 
+            padding: 60px 0 30px;
+            font-size: 0.8rem; 
+            color: #d1c7bc; 
             text-align: center; 
             letter-spacing: 2px;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <a href="../index.html" class="back-btn">⇠ 首页</a>
+        <a href="../index.html" class="back-btn">← 首页</a>
         <div class="title">经典阅读</div>
         <div style="width: 45px;"></div>
     </div>
 
     <div class="book-list">
         
-        <a href="dizang/index.html" class="book-card">
+        <a href="dizang/index.html" class="book-card border-red">
             <span class="book-name">地藏菩萨本愿经</span>
             <span class="book-info">共十三品</span>
             <span class="arrow">❯</span>
         </a>
 
-        <a href="xinjing/index.html" class="book-card" style="border-left-color: #8c6d51;">
+        <a href="xinjing/index.html" class="book-card border-brown">
             <span class="book-name">般若波罗蜜多心经</span>
             <span class="book-info">一卷</span>
             <span class="arrow">❯</span>
