@@ -74,6 +74,26 @@
         
         /* 注解/括注 */
         .note { font-size: 15px; color: #888; font-weight: normal; }
+      /* 针对这段劝勉语的特殊处理 */
+.next-step-mark {
+    margin-top: 40px;      /* 与上方经文拉开距离 */
+    padding: 15px;
+    border-top: 1px dashed #ddd; /* 加一条淡淡的虚线，增加仪式感 */
+}
+
+.next-step-mark .sutra-content, 
+.next-step-mark p {
+    font-size: 15px !important;    /* 字体变小 */
+    color: #888888 !important;    /* 颜色变淡（灰色） */
+    font-weight: normal !important; /* 变细（取消加粗） */
+    line-height: 1.6 !important;   /* 行间距也相应收缩 */
+    letter-spacing: 0.5px !important; /* 字间距调紧 */
+}
+
+/* 同时把这段里的拼音也变淡 */
+.next-step-mark rt {
+    color: #bbbbbb !important; 
+}
     </style>
 </head>
 <body>
@@ -157,9 +177,11 @@
             <ruby>应<rt>yīng</rt></ruby><ruby>观<rt>guān</rt></ruby><ruby>法<rt>fǎ</rt></ruby><ruby>界<rt>jiè</rt></ruby><ruby>性<rt>xìng</rt></ruby>，<ruby>一<rt>yī</rt></ruby><ruby>切<rt>qiè</rt></ruby><ruby>唯<rt>wéi</rt></ruby><ruby>心<rt>xīn</rt></ruby><ruby>造<rt>zào</rt></ruby>。
         </p>
 
-        <div class="next-step-mark"><p>
-            <ruby>昔<rt>xī</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>云<rt>yún</rt></ruby>：<ruby>一<rt>yī</rt></ruby><ruby>偈<rt>jì</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>功<rt>gōng</rt></ruby>，<ruby>能<rt>néng</rt></ruby><ruby>破<rt>pò</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>狱<rt>yù</rt></ruby>。<ruby>何<rt>hé</rt></ruby><ruby>况<rt>kuàng</rt></ruby><ruby>此<rt>cǐ</rt></ruby><ruby>全<rt>quán</rt></ruby><ruby>一<rt>yī</rt></ruby><ruby>章<rt>zhāng</rt></ruby><ruby>偈<rt>jì</rt></ruby><ruby>耶<rt>yé</rt></ruby>？<ruby>愿<rt>yuàn</rt></ruby><ruby>思<rt>sī</rt></ruby><ruby>此<rt>cǐ</rt></ruby><ruby>言<rt>yán</rt></ruby>，<ruby>勉<rt>miǎn</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>传<rt>chuán</rt></ruby><ruby>诵<rt>sòng</rt></ruby>。
-        </p>
+        <div class="next-step-mark">
+    <p>
+        <ruby>昔<rt>xī</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>云<rt>yún</rt></ruby>：<ruby>一<rt>yī</rt></ruby><ruby>偈<rt>jì</rt></ruby><ruby>之<rt>zhī</rt></ruby><ruby>功<rt>gōng</rt></ruby>，<ruby>能<rt>néng</rt></ruby><ruby>破<rt>pò</rt></ruby><ruby>地<rt>dì</rt></ruby><ruby>狱<rt>yù</rt></ruby>。<ruby>何<rt>hé</rt></ruby><ruby>况<rt>kuàng</rt></ruby><ruby>此<rt>cǐ</rt></ruby><ruby>全<rt>quán</rt></ruby><ruby>一<rt>yī</rt></ruby><ruby>章<rt>zhāng</rt></ruby><ruby>偈<rt>jì</rt></ruby><ruby>耶<rt>yé</rt></ruby>？<ruby>愿<rt>yuàn</rt></ruby><ruby>思<rt>sī</rt></ruby><ruby>此<rt>cǐ</rt></ruby><ruby>言<rt>yán</rt></ruby>，<ruby>勉<rt>miǎn</rt></ruby><ruby>共<rt>gòng</rt></ruby><ruby>传<rt>chuán</rt></ruby><ruby>诵<rt>sòng</rt></ruby>。
+    </p>
+</div>
 
        <div class="mantra-title">地藏菩萨偈 <span class="note">（一遍）</span></div>
         <p style="text-align: center;">
