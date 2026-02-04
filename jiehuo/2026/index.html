@@ -3,155 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2026年度存档</title>
+    <title>2026年度存档 | 文字解惑</title>
     <style>
-        body { 
-            background: #f4f1ea; 
-            color: #3e3a36; 
-            font-family: -apple-system, "Noto Sans SC", serif; 
-            margin: 0; 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
-        
-        .header { 
-            width: 100%; 
-            max-width: 600px; 
-            margin: 20px 0 10px; 
-        }
-        
-        .back-btn { 
-            text-decoration: none; 
-            color: #b0aaa5; 
-            font-size: 0.9rem;
-        }
-
-        .list-container { 
-            width: 100%; 
-            max-width: 600px; 
-            margin-top: 10px;
-        }
-
-        /* 极简列表项 */
-        .item-link { 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5px; 
-            text-decoration: none;
-            color: #3e3a36;
-            border-bottom: 1px solid #e8e4db; 
-            transition: opacity 0.2s;
-        }
-
-        .item-link:active { opacity: 0.6; }
-
-        .item-title { 
-            font-size: 1.05rem; 
-            color: #2c2c2c;
-            font-weight: 400; 
-            letter-spacing: 0.5px;
-        }
-
-        .item-date {
-            color: #b0aaa5;
-            font-size: 0.85rem;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-        }
-
-        .arrow { 
-            color: #d1c7bc; 
-            font-size: 0.8rem; 
-            margin-left: 8px; 
-        }
-
-        .footer { 
-            margin-top: 100px; 
-            color: #d1c7bc; 
-            font-size: 0.75rem; 
-            text-align: center; 
-            letter-spacing: 1px;
-        }
+        body { background: #f4f1ea; color: #3e3a36; font-family: -apple-system, "Noto Sans SC", serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .header { width: 100%; max-width: 600px; margin: 20px 0 10px; }
+        .back-btn { text-decoration: none; color: #b0aaa5; font-size: 0.9rem; }
+        .main-card { background: white; width: 100%; max-width: 600px; border-radius: 24px; padding: 30px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); box-sizing: border-box; border: 1px solid #e0dcd5; }
+        .title { font-size: 1.4rem; color: #8c6d51; text-align: center; margin-bottom: 30px; font-weight: bold; letter-spacing: 2px; }
+        .list-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 15px; text-decoration: none; color: #3e3a36; border-bottom: 1px solid #f8f6f2; transition: background 0.2s; }
+        .list-item:last-child { border-bottom: none; }
+        .list-item:active { background: #fafafa; }
+        .item-name { font-size: 1.05rem; }
+        .item-date { color: #b0aaa5; font-size: 0.85rem; font-family: monospace; }
+        .footer { margin-top: 50px; color: #d1c7bc; font-size: 0.8rem; text-align: center; padding-bottom: 40px; }
     </style>
 </head>
 <body>
-
     <div class="header">
-        <a href="../index.html" class="back-btn">← 返回</a>
+        <a href="../index.html" class="back-btn">⇠ 返回年份</a>
     </div>
 
-    <div class="list-container">
-        <a href="0107.html" class="item-link">
-        <span class="item-title">若见诸相非相即见如来</span>
-    <div>
-        <span class="item-date">20260107</span>
-        <span class="arrow">❯</span>
-    </div>
-</a>
-        <a href="0202.html" class="item-link">
-            <span class="item-title">发心 心诚</span>
-            <div>
-                 <span class="item-date">20260202</span>
-                 <span class="arrow">❯</span>
-             </div>
-        </a>
-
-         <a href="0202renge.html" class="item-link">
-            <span class="item-title">先修做人</span>
-            <div>
-                 <span class="item-date">20260202</span>
-                 <span class="arrow">❯</span>
-             </div>
-        </a>
+    <div class="main-card">
+        <div class="title">二零二六 · 存档目录</div>
         
-         <a href="0203tianxin.html" class="item-link">
-            <span class="item-title">论天心与合道</span>
-            <div>
-                <span class="item-date">20260202</span>
-                <span class="arrow">❯</span>
-            </div>
-        </a>
-        
-        <a href="0203.html" class="item-link">
-            <span class="item-title">关于解脱与法</span>
-            <div>
-                <span class="item-date">20260203</span>
-                <span class="arrow">❯</span>
-            </div>
+        <a href="0107.html" class="list-item">
+            <span class="item-name">文字解惑</span>
+            <span class="item-date">2026.01.07</span>
         </a>
 
-        <a href="0203shentong.html" class="item-link">
-            <span class="item-title">神通</span>
-           <div>
-                 <span class="item-date">20260203</span>
-                 <span class="arrow">❯</span>
-            </div>
-         </a>
+        <a href="0202renge.html" class="list-item">
+            <span class="item-name">人格的力量</span>
+            <span class="item-date">2026.02.02</span>
+        </a>
 
-        <a href="0204love.html" class="item-link">
-            <span class="item-title">修行与爱</span>
-           <div>
-                 <span class="item-date">20260204</span>
-                 <span class="arrow">❯</span>
-            </div>
-         </a>
+        <a href="0202sanguan.html" class="list-item">
+            <span class="item-name">三观与人格</span>
+            <span class="item-date">2026.02.02</span>
+        </a>
 
-        <a href="0204.html" class="item-link">
-            <span class="item-title">心力与谦心</span>
-           <div>
-                 <span class="item-date">20260204</span>
-                 <span class="arrow">❯</span>
-            </div>
-         </a>
+        <a href="0203shentong.html" class="list-item">
+            <span class="item-name">神通</span>
+            <span class="item-date">2026.02.03</span>
+        </a>
+
+        <a href="0203tianxin.html" class="list-item">
+            <span class="item-name">天心</span>
+            <span class="item-date">2026.02.03</span>
+        </a>
+
+        <a href="0204love.html" class="list-item">
+            <span class="item-name">修行与爱</span>
+            <span class="item-date">2026.02.04</span>
+        </a>
+
+        <a href="0204.html" class="list-item">
+            <span class="item-name">心力与谦心</span>
+            <span class="item-date">2026.02.04</span>
+        </a>
 
     </div>
 
     <div class="footer">
-        愿以此功德 普及于一切<br>
-        愿智慧之光 常照世间
+        — 吃独食最快乐 —
     </div>
-
 </body>
 </html>
