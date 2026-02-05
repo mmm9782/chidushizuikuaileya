@@ -12,13 +12,33 @@
         body { background: #f4f1ea; color: #3e3a36; font-family: -apple-system, "Noto Sans SC", serif; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
         .header { width: 100%; max-width: 600px; margin: 20px 0 10px; }
         .back-btn { text-decoration: none; color: #b0aaa5; font-size: 0.9rem; }
+        
+        /* 搜索框样式 */
+        .search-container { width: 100%; max-width: 600px; margin-bottom: 20px; }
+        #searchInput { 
+            width: 100%; 
+            padding: 12px 20px; 
+            border-radius: 50px; 
+            border: 1px solid #e0dcd5; 
+            outline: none; 
+            font-size: 1rem; 
+            background: white;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        #searchInput:focus { border-color: #8c6d51; box-shadow: 0 4px 15px rgba(140, 109, 81, 0.1); }
+
         .main-card { background: white; width: 100%; max-width: 600px; border-radius: 24px; padding: 30px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); box-sizing: border-box; border: 1px solid #e0dcd5; }
         .title { font-size: 1.4rem; color: #8c6d51; text-align: center; margin-bottom: 30px; font-weight: bold; letter-spacing: 2px; }
+        
         .list-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 15px; text-decoration: none; color: #3e3a36; border-bottom: 1px solid #f8f6f2; transition: background 0.2s; }
         .list-item:last-child { border-bottom: none; }
         .list-item:active { background: #fafafa; }
         .item-name { font-size: 1.05rem; }
         .item-date { color: #b0aaa5; font-size: 0.85rem; font-family: monospace; }
+        
+        .no-result { text-align: center; color: #b0aaa5; padding: 30px; display: none; }
         .footer { margin-top: 50px; color: #d1c7bc; font-size: 0.8rem; text-align: center; padding-bottom: 40px; }
     </style>
 </head>
@@ -27,78 +47,111 @@
         <a href="../index.html" class="back-btn">⇠ 返回年份</a>
     </div>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="搜索篇章标题..." onkeyup="filterList()">
+    </div>
+
     <div class="main-card">
         <div class="title">二零二六 · 存档目录</div>
 
-           <a href="0203.html" class="list-item">
-            <span class="item-name">001 关于解脱与法</span>
-            <span class="item-date">2024.02.29</span>
-        </a>
+        <div id="articleList">
+            <a href="0203.html" class="list-item">
+                <span class="item-name">001 关于解脱与法</span>
+                <span class="item-date">2024.02.29</span>
+            </a>
 
-         <a href="20251104.html" class="list-item">
-            <span class="item-name">002 寒衣节 | 送寒衣</span>
-            <span class="item-date">2025.11.04</span>
-        </a>
+            <a href="20251104.html" class="list-item">
+                <span class="item-name">002 寒衣节 | 送寒衣</span>
+                <span class="item-date">2025.11.04</span>
+            </a>
 
-         <a href="20251118.html" class="list-item">
-            <span class="item-name">003 不私聊 | 本命渡师</span>
-            <span class="item-date">2025.11.18</span>
-        </a>
+            <a href="20251118.html" class="list-item">
+                <span class="item-name">003 不私聊 | 本命渡师</span>
+                <span class="item-date">2025.11.18</span>
+            </a>
 
-         <a href="20251129.html" class="list-item">
-            <span class="item-name">004 科普：邪师 能量</span>
-            <span class="item-date">2025.11.29</span>
-        </a>
-        
-        <a href="0107.html" class="list-item">
-            <span class="item-name">005 若见诸相非相即见如来</span>
-            <span class="item-date">2026.01.07</span>
-        </a>
+            <a href="20251129.html" class="list-item">
+                <span class="item-name">004 科普：邪师 能量</span>
+                <span class="item-date">2025.11.29</span>
+            </a>
+            
+            <a href="0107.html" class="list-item">
+                <span class="item-name">005 若见诸相非相即见如来</span>
+                <span class="item-date">2026.01.07</span>
+            </a>
 
-        <a href="0202.html" class="list-item">
-            <span class="item-name">006 发心 心诚</span>
-            <span class="item-date">2026.02.02</span>
-        </a>
+            <a href="0202.html" class="list-item">
+                <span class="item-name">006 发心 心诚</span>
+                <span class="item-date">2026.02.02</span>
+            </a>
 
-        <a href="0202renge.html" class="list-item">
-            <span class="item-name">007  先修做人</span>
-            <span class="item-date">2026.02.02</span>
-        </a>
+            <a href="0202renge.html" class="list-item">
+                <span class="item-name">007 先修做人</span>
+                <span class="item-date">2026.02.02</span>
+            </a>
 
-        <a href="0203shentong.html" class="list-item">
-            <span class="item-name">008  神通</span>
-            <span class="item-date">2026.02.03</span>
-        </a>
+            <a href="0203shentong.html" class="list-item">
+                <span class="item-name">008 神通</span>
+                <span class="item-date">2026.02.03</span>
+            </a>
 
-        <a href="0203tianxin.html" class="list-item">
-            <span class="item-name">009  天心</span>
-            <span class="item-date">2026.02.03</span>
-        </a>
+            <a href="0203tianxin.html" class="list-item">
+                <span class="item-name">009 天心</span>
+                <span class="item-date">2026.02.03</span>
+            </a>
 
-        <a href="0204love.html" class="list-item">
-            <span class="item-name">010  修行与爱</span>
-            <span class="item-date">2026.02.04</span>
-        </a>
+            <a href="0204love.html" class="list-item">
+                <span class="item-name">010 修行与爱</span>
+                <span class="item-date">2026.02.04</span>
+            </a>
 
-        <a href="0204.html" class="list-item">
-            <span class="item-name">011  心力与谦心</span>
-            <span class="item-date">2026.02.04</span>
-        </a>
+            <a href="0204.html" class="list-item">
+                <span class="item-name">011 心力与谦心</span>
+                <span class="item-date">2026.02.04</span>
+            </a>
 
-        <a href="0205one.html" class="list-item">
-            <span class="item-name">012  修行与立身（莫膨胀）</span>
-            <span class="item-date">2026.02.05</span>
-        </a>
+            <a href="0205one.html" class="list-item">
+                <span class="item-name">012 修行与立身（莫膨胀）</span>
+                <span class="item-date">2026.02.05</span>
+            </a>
 
-        <a href="0205two.html" class="list-item">
-            <span class="item-name">012  我慢与人格的考验</span>
-            <span class="item-date">2026.02.05</span>
-        </a>
+            <a href="0205two.html" class="list-item">
+                <span class="item-name">013 我慢与人格的考验</span>
+                <span class="item-date">2026.02.05</span>
+            </a>
+        </div>
 
+        <div id="noResult" class="no-result">未找到相关内容</div>
     </div>
 
     <div class="footer">
         — 吃独食最快乐 —
     </div>
+
+    <script>
+        function filterList() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const list = document.getElementById('articleList');
+            const items = list.getElementsByClassName('list-item');
+            const noResult = document.getElementById('noResult');
+            let hasVisibleItem = false;
+
+            for (let i = 0; i < items.length; i++) {
+                const name = items[i].getElementsByClassName('item-name')[0];
+                const textValue = name.textContent || name.innerText;
+                
+                if (textValue.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                    hasVisibleItem = true;
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+            
+            // 如果没有匹配项，显示提示语
+            noResult.style.display = hasVisibleItem ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
